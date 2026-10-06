@@ -3,6 +3,7 @@
 
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_UNKNOWN_APPEARANCE), SIGNAL_REMOVETRAIT(TRAIT_UNKNOWN_APPEARANCE)), PROC_REF(update_ID_card))
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_DWARF), SIGNAL_REMOVETRAIT(TRAIT_DWARF)), PROC_REF(on_dwarf_trait))
+	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_DWORF), SIGNAL_REMOVETRAIT(TRAIT_DWORF)), PROC_REF(on_dworf_trait))
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_TOO_TALL), SIGNAL_REMOVETRAIT(TRAIT_TOO_TALL)), PROC_REF(on_tootall_trait))
 
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_FAT), SIGNAL_REMOVETRAIT(TRAIT_FAT), SIGNAL_ADDTRAIT(TRAIT_FAT_IGNORE_SLOWDOWN), SIGNAL_REMOVETRAIT(TRAIT_FAT_IGNORE_SLOWDOWN)), PROC_REF(on_fat))
@@ -15,6 +16,11 @@
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_HUSK), SIGNAL_REMOVETRAIT(TRAIT_HUSK)), PROC_REF(husk_trait_toggle))
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_INVISIBLE_MAN), SIGNAL_REMOVETRAIT(TRAIT_INVISIBLE_MAN)), PROC_REF(invisible_man_toggle))
 	RegisterSignals(src, list(SIGNAL_ADDTRAIT(TRAIT_NO_UNDERWEAR), SIGNAL_REMOVETRAIT(TRAIT_NO_UNDERWEAR)), PROC_REF(no_underwear_toggle))
+
+/mob/living/carbon/human/proc/on_dworf_trait(datum/source)
+	SIGNAL_HANDLER
+
+	update_mob_height()
 
 /// Gaining or losing [TRAIT_DWARF] updates our height and grants passtable
 /mob/living/carbon/human/proc/on_dwarf_trait(datum/source)

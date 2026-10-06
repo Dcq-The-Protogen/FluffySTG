@@ -60,6 +60,9 @@
 	if(HAS_TRAIT(holder, TRAIT_DWARF))
 		return MONKEY_HEIGHT_DWARF
 
+	if(HAS_TRAIT(holder, TRAIT_DWORF))
+		return MONKEY_HEIGHT_DWARF
+
 	if(HAS_TRAIT(holder, TRAIT_TOO_TALL))
 		return MONKEY_HEIGHT_TALL
 

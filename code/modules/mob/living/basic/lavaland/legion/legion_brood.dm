@@ -92,6 +92,8 @@
 /mob/living/basic/mining/legion_brood/proc/get_legion_type(mob/living/carbon/human/target)
 	if (ismonkey(target))
 		return /mob/living/basic/mining/legion/monkey
+	if (HAS_TRAIT(target, TRAIT_DWORF))
+		return /mob/living/basic/mining/legion/dwarf
 	if (HAS_TRAIT(target, TRAIT_DWARF))
 		return /mob/living/basic/mining/legion/dwarf
 	return /mob/living/basic/mining/legion

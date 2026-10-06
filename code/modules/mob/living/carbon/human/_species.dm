@@ -2135,6 +2135,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(HAS_TRAIT(holder, TRAIT_DWARF))
 		return HUMAN_HEIGHT_DWARF
 
+	if(HAS_TRAIT(holder, TRAIT_DWORF))
+		return HUMAN_HEIGHT_DWARF
+
 	if(HAS_TRAIT(holder, TRAIT_TOO_TALL))
 		return HUMAN_HEIGHT_TALLEST
 

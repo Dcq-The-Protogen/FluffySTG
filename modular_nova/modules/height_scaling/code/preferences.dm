@@ -20,9 +20,9 @@
 
 /datum/preference/choiced/height_scaling/init_possible_values()
 	return list(
-		HUMAN_HEIGHT_SHORT, 
-		HUMAN_HEIGHT_MEDIUM, 
-		HUMAN_HEIGHT_TALL, 
+		HUMAN_HEIGHT_SHORT,
+		HUMAN_HEIGHT_MEDIUM,
+		HUMAN_HEIGHT_TALL,
 		HUMAN_HEIGHT_TALLER,
 		HUMAN_HEIGHT_TALLEST,
 	)
@@ -49,6 +49,9 @@
 
 /datum/preference/choiced/height_scaling/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	if (HAS_TRAIT(target, TRAIT_DWARF)) // nuh uh. your height is set mf
+		return FALSE
+
+	if (HAS_TRAIT(target, TRAIT_DWORF)) // nuh uh. your height is set mf x2
 		return FALSE
 
 	for (var/quirk_id in preferences?.all_quirks)
