@@ -1390,7 +1390,7 @@ mutant_styles: The mutant style - taur bodytype, STYLE_TESHARI, etc. // NOVA EDI
 	))
 
 	switch(mob_height)
-		// Don't set this one directly, use TRAIT_DWARF or TRAIT_DWORF
+		// Don't set this one directly, use TRAIT_DWARF. TFF Addition: You also can use TRAIT_DWORF
 		if(MONKEY_HEIGHT_DWARF)
 			appearance.add_filters(list(
 				list(

@@ -2134,10 +2134,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 /datum/species/proc/update_species_heights(mob/living/carbon/human/holder)
 	if(HAS_TRAIT(holder, TRAIT_DWARF))
 		return HUMAN_HEIGHT_DWARF
-
+	/// TFF Addition start
 	if(HAS_TRAIT(holder, TRAIT_DWORF))
 		return HUMAN_HEIGHT_DWARF
-
+	/// TFF Addition end
 	if(HAS_TRAIT(holder, TRAIT_TOO_TALL))
 		return HUMAN_HEIGHT_TALLEST
 

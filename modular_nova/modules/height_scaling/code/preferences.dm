@@ -50,10 +50,10 @@
 /datum/preference/choiced/height_scaling/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	if (HAS_TRAIT(target, TRAIT_DWARF)) // nuh uh. your height is set mf
 		return FALSE
-
-	if (HAS_TRAIT(target, TRAIT_DWORF)) // nuh uh. your height is set mf x2
+	/// TFF Addition start
+	if (HAS_TRAIT(target, TRAIT_DWORF))
 		return FALSE
-
+	/// TFF Addition end
 	for (var/quirk_id in preferences?.all_quirks)
 		if (quirk_id in incompatable_quirk_ids)
 			return FALSE

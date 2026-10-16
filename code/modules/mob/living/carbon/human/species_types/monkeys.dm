@@ -59,10 +59,10 @@
 /datum/species/monkey/update_species_heights(mob/living/carbon/human/holder)
 	if(HAS_TRAIT(holder, TRAIT_DWARF))
 		return MONKEY_HEIGHT_DWARF
-
+	/// TFF Addition start
 	if(HAS_TRAIT(holder, TRAIT_DWORF))
 		return MONKEY_HEIGHT_DWARF
-
+	/// TFF Addition end
 	if(HAS_TRAIT(holder, TRAIT_TOO_TALL))
 		return MONKEY_HEIGHT_TALL
 
